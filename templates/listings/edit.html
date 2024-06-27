@@ -1,0 +1,40 @@
+{% extends "layouts/boilerplate.html" %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h3>Edit your Listing</h3>
+        <form method="POST" action="/listings/{{ listing._id }}?_method=PUT" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" value="{{ listing.title }}" class="form-control" required>
+                <div class="valid-feedback">Title looks good</div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" class="form-control" required>{{ listing.description }}</textarea>
+                <div class="invalid-feedback">Please enter a short description</div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image Link</label>
+                <input type="text" name="listing[image]" value="{{ listing.image }}" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid link for image</div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="listing[price]" value="{{ listing.price }}" class="form-control" required>
+                    <div class="invalid-feedback">Price should be valid</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Writer</label>
+                <input type="text" name="listing[writer]" value="{{ listing.writer }}" class="form-control" required>
+                <div class="invalid-feedback">Writer name should be present</div>
+            </div>
+            <button class="btn btn-dark edit-btn mt-3 mb-3">Edit</button>
+            <br><br><br><br>
+        </form>
+    </div>
+</div>
+{% endblock %}

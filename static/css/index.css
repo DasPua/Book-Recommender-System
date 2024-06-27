@@ -1,0 +1,40 @@
+body {
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.listing-card {
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.listing-card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+.card-text b {
+    font-size: 1.1rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}

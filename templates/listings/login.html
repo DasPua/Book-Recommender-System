@@ -1,0 +1,59 @@
+{% extends "layouts/boilerplate.html" %}
+
+{% block content %}
+<body>
+    <div class="row mt-3 mb-3">
+        <div class="col-10">
+            <h3 style="color: #fe424d;">Online Library</h3>
+        </div>
+        <div class="col-2">
+            <a href="/signUp"><button class="btn btn-dark">Sign-Up</button></a>
+        </div>
+    </div>
+    <hr> <br>
+    <div class="row mt-3">
+        <div class="col-8">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto,h_710/welcome/welcome-book-shelves_2x" class="card-img-top" alt="book">
+        </div>
+        <div class="col-4" style="padding-top: 7rem;">
+            <h3><b>Hello Fellow Book Lovers!</b></h3>
+            <br>
+            <p>Join for <span style="color: #fe424d;">FREE</span> to know what to read next:</p>
+            <form action="#">
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" name="people[email]" placeholder="Enter e-mail ID" class="form-control" required>
+                    <div class="invalid-feedback">Enter a valid E-mail</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="people[password]" placeholder="Enter your password" class="form-control" required>
+                </div>
+                <button class="btn btn-dark add-btn mt-3 mb-3">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3 mb-3 offset-1">
+        <div class="col-6 info1" style="padding-top: 7rem;">
+            <div class="information">
+                <h3 style="color: #fe424d;">Specially Curated Books for You.</h3>
+            </div>
+        </div>
+        <div class="col-4 img1">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/ipad-library_2x" alt="tab" class="tab-img">
+        </div>
+    </div>
+    <!--<div class="row mt-3">
+        <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/left-arrow" alt="arrow" class="arrow-img">
+    </div>-->
+    <div class="row mt-3 mb-3">
+        <div class="col-4 img2">
+            <img src="https://keywordtool.io/images/svg/undraw_web_search_eetr.svg" alt="keyword" class="search-img">
+        </div>
+        <div class="col-6 info2" style="padding-top: 7rem; padding-left: 20rem;">
+            <h3 style="color: #fe424d;">Efficient Search</h3>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

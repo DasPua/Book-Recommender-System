@@ -1,0 +1,27 @@
+{% extends "layouts/boilerplate.html" %}
+
+{% block content %}
+<body>
+    <h3>All Listings</h3>
+    
+    <div class="container">
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+            {% for i in allListings %}
+                <div class="col mb-4">
+                    <a href="/listings/{{ loop.index }}" class="listing-link">
+                        <div class="card listing-card">
+                            <img src="{{ i[2] }}" class="card-img-top" alt="listing_image">
+                            <div class="card-body">
+                              <p class="card-text">
+                                <b>{{ i[0] }}</b> <br>
+                                Author: {{ i[1] }}
+                              </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}

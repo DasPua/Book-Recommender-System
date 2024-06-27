@@ -1,0 +1,24 @@
+{% extends "layouts/boilerplate.html" %}
+
+{% block content %}
+<body>
+    <div class="row mt-3">
+        <div class="col-5 offset-2">
+            <h3>Add Details for recommending book</h3>
+            <form method="POST" action="/recommend" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Genre</label>
+                    <input type="text" name="title" placeholder="Enter a valid genre" class="form-control" required>
+                    <div class="invalid-feedback">Enter valid Genre</div>
+                </div>
+                <button class="btn btn-dark add-btn mt-3 mb-3">Find</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-4 offset-2 mb-3">
+            <h3>Past Recommendations</h3>
+        </div>
+    </div>
+</body>
+{% endblock %}

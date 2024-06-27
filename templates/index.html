@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='css/letter-l-alphabet-capital-260nw-2118001622.webp') }}"
+        type="image/webp">
+</head>
+
+<body>
+    <ul>
+        <li class="ol"><a href="{{ url_for('homepage') }}">OnlineLibrary</a></li>
+        <li class="si"><a href="{{ url_for('signup') }}"><button class="text">Sign-Up</button></a></li>
+    </ul>
+    <hr class="light-hr">
+    <div class="container">
+        <div class="left">
+            <img src="{{ url_for('static', filename='css/welcome-book-shelves_2x.jpeg') }}" alt="Image">
+        </div>
+        <div class="right">
+            <p class="hi">Hello Fellow Book Lovers!</p>
+            <div class="jo">Join for <span class="free">FREE</span> to know what to read next:</div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Enter your Email :" class="form-control">
+            </div>
+            <div class="form-wrapper">
+                <input type="password" placeholder="Enter your Password :" class="form-control">
+            </div>
+            <li class="log">
+                <button class="in">LogIn</button>
+            </li>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <p class="extra">Specially Curated Books for You.</p>
+        </div>
+        <div class="right">
+            <img src="{{ url_for('static', filename='css/ipad-library_2x.jpeg') }}" alt="Image">
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='css/left-arrow.webp') }}" alt="Image" class="leftarr">
+    <div class="container">
+        <div class="left">
+            <img src="{{ url_for('static', filename='css/undraw_web_search_eetr.svg') }}" alt="Image">
+        </div>
+        <div class="right">
+            <p class="search">Efficient Search</p>
+        </div>
+    </div>
+</body>
+
+</html>
